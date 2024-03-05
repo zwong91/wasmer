@@ -1715,9 +1715,9 @@ dependencies = [
  "wasm-smith",
  "wasmer-compiler-cranelift",
  "wasmer-compiler-llvm",
- "wasmer-compiler-singlepass-near",
- "wasmer-engine-universal-near",
- "wasmer-near",
+ "wasmer-compiler-singlepass-unc",
+ "wasmer-engine-universal-unc",
+ "wasmer-unc",
  "wasmprinter",
 ]
 
@@ -1736,9 +1736,9 @@ dependencies = [
  "smallvec",
  "target-lexicon",
  "tracing",
- "wasmer-compiler-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-unc",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
 ]
 
 [[package]]
@@ -1758,28 +1758,13 @@ dependencies = [
  "semver 1.0.4",
  "smallvec",
  "target-lexicon",
- "wasmer-compiler-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-unc",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
 ]
 
 [[package]]
-name = "wasmer-compiler-near"
-version = "2.4.1"
-dependencies = [
- "enumset",
- "hashbrown 0.11.2",
- "rkyv",
- "smallvec",
- "target-lexicon",
- "thiserror",
- "wasmer-types-near",
- "wasmer-vm-near",
- "wasmparser 0.78.2",
-]
-
-[[package]]
-name = "wasmer-compiler-singlepass-near"
+name = "wasmer-compiler-singlepass-unc"
 version = "2.4.1"
 dependencies = [
  "byteorder",
@@ -1792,13 +1777,28 @@ dependencies = [
  "rayon",
  "smallvec",
  "target-lexicon",
- "wasmer-compiler-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-unc",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
 ]
 
 [[package]]
-name = "wasmer-derive-near"
+name = "wasmer-compiler-unc"
+version = "2.4.1"
+dependencies = [
+ "enumset",
+ "hashbrown 0.11.2",
+ "rkyv",
+ "smallvec",
+ "target-lexicon",
+ "thiserror",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
+ "wasmparser 0.78.2",
+]
+
+[[package]]
+name = "wasmer-derive-unc"
 version = "2.4.1"
 dependencies = [
  "compiletest_rs",
@@ -1806,11 +1806,11 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
- "wasmer-near",
+ "wasmer-unc",
 ]
 
 [[package]]
-name = "wasmer-engine-near"
+name = "wasmer-engine-unc"
 version = "2.4.1"
 dependencies = [
  "backtrace",
@@ -1821,13 +1821,13 @@ dependencies = [
  "rustc-demangle",
  "target-lexicon",
  "thiserror",
- "wasmer-compiler-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-unc",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
 ]
 
 [[package]]
-name = "wasmer-engine-universal-near"
+name = "wasmer-engine-universal-unc"
 version = "2.4.1"
 dependencies = [
  "cfg-if",
@@ -1836,10 +1836,10 @@ dependencies = [
  "region",
  "rkyv",
  "thiserror",
- "wasmer-compiler-near",
- "wasmer-engine-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-unc",
+ "wasmer-engine-unc",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
  "winapi",
 ]
 
@@ -1848,7 +1848,16 @@ name = "wasmer-integration-tests-ios"
 version = "2.1.0"
 
 [[package]]
-name = "wasmer-near"
+name = "wasmer-types-unc"
+version = "2.4.1"
+dependencies = [
+ "indexmap",
+ "rkyv",
+ "thiserror",
+]
+
+[[package]]
+name = "wasmer-unc"
 version = "2.4.1"
 dependencies = [
  "anyhow",
@@ -1860,28 +1869,19 @@ dependencies = [
  "thiserror",
  "wasmer-compiler-cranelift",
  "wasmer-compiler-llvm",
- "wasmer-compiler-near",
- "wasmer-compiler-singlepass-near",
- "wasmer-derive-near",
- "wasmer-engine-near",
- "wasmer-engine-universal-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-singlepass-unc",
+ "wasmer-compiler-unc",
+ "wasmer-derive-unc",
+ "wasmer-engine-unc",
+ "wasmer-engine-universal-unc",
+ "wasmer-types-unc",
+ "wasmer-vm-unc",
  "wat",
  "winapi",
 ]
 
 [[package]]
-name = "wasmer-types-near"
-version = "2.4.1"
-dependencies = [
- "indexmap",
- "rkyv",
- "thiserror",
-]
-
-[[package]]
-name = "wasmer-vm-near"
+name = "wasmer-vm-unc"
 version = "2.4.1"
 dependencies = [
  "backtrace",
@@ -1894,7 +1894,7 @@ dependencies = [
  "region",
  "rkyv",
  "thiserror",
- "wasmer-types-near",
+ "wasmer-types-unc",
  "winapi",
 ]
 
@@ -1905,7 +1905,7 @@ dependencies = [
  "anyhow",
  "tempfile",
  "thiserror",
- "wasmer-near",
+ "wasmer-unc",
  "wast",
 ]
 
@@ -1929,13 +1929,13 @@ dependencies = [
  "tracing-subscriber",
  "wasmer-compiler-cranelift",
  "wasmer-compiler-llvm",
- "wasmer-compiler-near",
- "wasmer-compiler-singlepass-near",
- "wasmer-engine-near",
- "wasmer-engine-universal-near",
- "wasmer-near",
- "wasmer-types-near",
- "wasmer-vm-near",
+ "wasmer-compiler-singlepass-unc",
+ "wasmer-compiler-unc",
+ "wasmer-engine-unc",
+ "wasmer-engine-universal-unc",
+ "wasmer-types-unc",
+ "wasmer-unc",
+ "wasmer-vm-unc",
  "wasmer-wast",
  "wat",
 ]

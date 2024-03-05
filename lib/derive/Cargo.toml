@@ -1,5 +1,5 @@
 [package]
-name = "wasmer-derive-near"
+name = "wasmer-derive-unc"
 version = "2.4.1"
 description = "Wasmer derive macros"
 authors = ["Wasmer Engineering Team <engineering@wasmer.io>"]
@@ -18,5 +18,5 @@ proc-macro2 = "1"
 proc-macro-error = "1.0.0"
 
 [dev-dependencies]
-wasmer = { path = "../api", version = "=2.4.1", package = "wasmer-near" }
+wasmer = { path = "../api", version = "=2.4.1", package = "wasmer-unc" }
 compiletest_rs = "0.6"
